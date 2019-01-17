@@ -1,21 +1,99 @@
 /**index.wxss**/
-.userinfo {
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+.swiper {
+  margin-top: 0;
+}
+.block {
+  height: 25px;
+  width: 100%;
+}
+.left {
+  width: 50%;
+  border-left: 5px solid orange;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+.title {
+  font-size: 14px;
+  color: #5e5e5e;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: 400;
+}
+.pro_container {
+  width: 100%;
+}
+.item {
+  width: 100%;
+}
+.top {
+  width: 100%;
+  height: 85px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.bottom {
+  width: 100%;
+  height: 25px;
+}
+.name {
+  padding-left: 5px;
+}
+._name {
+  font-size: 14px;
+  color: #5e5e5e;
+}
+.detail {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  margin-right: 5px;
+  padding-top: 10px;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.span {
+  display: flex;
+  flex-direction: column;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.value {
+  font-size: 18px;
+  color: orange;
+  text-align: center;
+  font-weight: 400;
 }
-
-.usermotto {
-  margin-top: 200px;
+.key {
+  font-size: 12px;
+  color: #5e5e5e;
+  font-weight: 200;
+}
+.buy {
+  margin: 0;
+  padding: 0;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+.type {
+  font-size: 12px;
+  color: #5e5e5e;
+  font-weight: 200;
+  padding-left: 5px;
+}
+.balance {
+  font-size: 12px;
+  color: #5e5e5e;
+  font-weight: 200;
+  padding-right: 5px;
 }

@@ -1,13 +1,46 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<scroll-view scroll-x="false">
+	<swiper
+	 indicator-dots="{{indicatorDots}}"
+	 autoplay="{{autoplay}}"
+	 interval="{{interval}}"
+	 duration="{{duration}}"
+	 class="swiper"
+	>
+		<block wx:for="{{imgs}}" wx:key="{{item.id}}">
+			<swiper-item>
+				<image src="{{item.url}}" class="slide-image" mode="widthFix" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="block">
+		<view class="left">
+			<text class="title">热门理财</text>
+		</view>
+	</view>
+	<view class="pro_container">
+		<view wx:for="{{products}}" wx:key="{{item.id}}" class="item">
+			<view class="top">
+				<view class="name">
+					<text class="_name">{{item.name}}</text>
+				</view>
+				<view class="detail">
+					<view class="span">
+						<text class="value">{{item.interest}}</text>
+						<text class="key">年化收益</text>
+					</view>
+					<view class="span">
+						<text class="value">1元</text>
+						<text class="key">起投金额</text>
+					</view>
+					<button type="primary" size="mini" class="buy">立即购买</button>
+				</view>
+			</view>
+			<view class="bottom">
+				<text class="type">{{item.type}}</text>
+				<text class="balance">剩余：￥{{item.balance}}</text>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+

@@ -1,6 +1,59 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="container">
+	<view class="top">
+		<view class="total">
+			<text class="asset">总资产</text>
+			<text class="amount">￥383.63</text>
+		</view>
+		<view class="top_right">
+			<text class="text_btn">明细</text>
+			<text class="text_btn">充值</text>
+		</view>
+	</view>
+	<view class="row">
+		<view class="box">
+			<text class="investing">投资中</text>
+			<text class="rmb">￥12.00</text>
+		</view>
+		<view class="box">
+			<text class="investing">账户余额</text>
+			<text class="rmb">￥368.27</text>
+		</view>
+	</view>
+	<view class="row">
+		<view class="box">
+			<text class="profit">预期收益</text>
+			<text class="rmb">￥12.00</text>
+		</view>
+		<view class="box">
+			<text class="profit">在途余额</text>
+			<text class="rmb">￥368.27</text>
+		</view>
+	</view>
+	<view class="list">
+		<view class="listItem">
+			<text class="item_text">购买记录</text>
+		</view>
+		<view class="listItem">
+			<text class="item_text">银行卡</text>
+		</view>
+	</view>
+	<view class="list">
+		<view class="listItem">
+			<text class="item_text">联系客服</text>
+		</view>
+		<view class="listItem">
+			<text class="item_text">关于</text>
+		</view>
+	</view>
+	<view class="btn_container">
+		<button
+		 type="primary"
+		 size="defaultSize"
+		 hover-class="defaultTap"
+		 class="button"
+		>退出当前账号
+		</button>
+	</view>
 </view>
+
